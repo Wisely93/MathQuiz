@@ -1,0 +1,3 @@
+﻿  MathQuiz.cpp
+C:\Users\Ngpoh\Desktop\c++\Math Quiz\MathQuiz\MathQuiz.cpp(110,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  MathQuiz.vcxproj -> C:\Users\Ngpoh\Desktop\c++\Math Quiz\MathQuiz\Debug\MathQuiz.exe
