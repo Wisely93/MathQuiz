@@ -9,44 +9,25 @@ int category, answer, counter=0, score=0;
 //Calculation operation
 void Calculation(int counter, int x, int y, int operant)
 {
-    switch (operant)
-    {
-    case 1:
+    if (operant == 1)
         cout << counter << ". " << x << " + " << y << " = ?" << endl;
-        cin >> answer;
-        if (answer == x + y)
-        {
-            cout << endl << "Your answer is correct!" << endl << endl;
-            score++;
-        }
-        else
-            cout << endl << "Wrong answer. The answer is :" << x + y << endl << endl;
-        break;
-
-    case 2:
+    else if (operant == 2)
         cout << counter << ". " << x << " - " << y << " = ?" << endl;
-        cin >> answer;
-        if (answer == x - y)
-        {
-            cout << endl << "Your answer is correct!" << endl << endl;
-            score++;
-        }
-        else
-            cout << endl << "Wrong answer. The answer is :" << x - y << endl << endl;
-        break;
-
-    case 3:
+    else if (operant == 3)
         cout << counter << ". " << x << " * " << y << " = ?" << endl;
-        cin >> answer;
-        if (answer == x * y)
-        {
-            cout << endl << "Your answer is correct!" << endl << endl;
-            score++;
-        }
-        else
-            cout << endl << "Wrong answer. The answer is :" << x * y << endl << endl;
-        break;
+
+    cin >> answer;
+
+    if (answer == x + y || answer == x - y || answer == x * y)
+    {
+        cout << endl << "Your answer is correct!" << endl << endl; score++;
     }
+    else if (operant == 1)
+        cout << endl << "Wrong answer. The answer is :" << x + y << endl << endl;
+    else if (operant == 2)
+        cout << endl << "Wrong answer. The answer is :" << x - y << endl << endl;
+    else if (operant == 3)
+        cout << endl << "Wrong answer. The answer is :" << x * y << endl << endl;
 }
 
 //Decide grade based on score
@@ -84,7 +65,6 @@ void NumberGenerator()
     cout << "Your Score is :" << score <<"/10"<<endl;
     Grade(score);
 }
-
 
 //Display Main Menu
 void Menu()
